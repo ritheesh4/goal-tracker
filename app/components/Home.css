@@ -10,6 +10,14 @@
   justify-content: center;
 }
 
+.goal__list {
+  position: absolute;
+  right: 0;
+  left: 70%;
+
+  /* padding-right: ; */
+}
+
 /* .container h2 {
   font-size: 5rem;
 }

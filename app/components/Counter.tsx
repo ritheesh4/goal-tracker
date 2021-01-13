@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function Counter() {
+const Counter = () => {
   return <div>Counter</div>;
-}
+};
+
+export default Counter;
