@@ -1,0 +1,10 @@
+.container {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

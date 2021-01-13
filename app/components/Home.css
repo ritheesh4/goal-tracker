@@ -1,14 +1,19 @@
 .container {
-  position: absolute;
+  /* position: absolute;
   top: 30%;
   left: 10px;
-  text-align: center;
+  text-align: center; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.container h2 {
+/* .container h2 {
   font-size: 5rem;
 }
 
 .container a {
   font-size: 1.4rem;
-}
+} */

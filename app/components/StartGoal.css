@@ -1,0 +1,12 @@
+.start__goal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.current__goal {
+  display: flex;
+  flex-direction: row;
+}
