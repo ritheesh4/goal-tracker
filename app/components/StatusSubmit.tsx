@@ -9,16 +9,16 @@ import styles from './StatusSubmit.css';
 
 export default function StatusSubmit() {
   const title = ['LOC', 'Language', 'Status'];
-  const languages = [
-    'JavaScript',
-    'Python',
-    'Go',
-    'CSS',
-    'HTML',
-    'JSX',
-    'SCSS',
-    'TS',
-  ];
+  // const languages = [
+  //   'JavaScript',
+  //   'Python',
+  //   'Go',
+  //   'CSS',
+  //   'HTML',
+  //   'JSX',
+  //   'SCSS',
+  //   'TS',
+  // ];
 
   return (
     <div className={styles.status__submit__container}>
