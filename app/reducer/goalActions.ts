@@ -1,11 +1,15 @@
-import { SET_GOAL, REMOVE_GOAL } from './goalTypes';
+import { SET_GOAL, REMOVE_GOAL, INPUT_VALUE } from './goalTypes';
 
-const setGoal = (goals: []) => {
-  return { type: SET_GOAL, payload: goals };
+const setGoal = (goal: string) => {
+  return { type: SET_GOAL, payload: goal };
 };
 
 const removeGoal = (index: number) => {
   return { type: REMOVE_GOAL, payload: index };
 };
 
-export default { setGoal, removeGoal };
+const inputValue = (value: string) => {
+  return { type: INPUT_VALUE, payload: value };
+};
+
+export default { setGoal, removeGoal, inputValue };

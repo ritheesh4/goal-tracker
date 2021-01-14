@@ -1,16 +1,19 @@
 import React from 'react';
-import styles from './GoalList.css';
+// import styles from './GoalList.css';
 
-export default function GoalList() {
+const GoalList = (props: any) => {
+  const { goals } = props;
+  const indexToNumber = 1;
+
   return (
     <div>
       <ol>
-        <li>1. Goalsdff</li>
-        <li>2. Goal</li>
-        <li>3. Gosdfsdfal</li>
-        <li>4. Goasdfsdfl</li>
-        <li>5. Goasdfdfl</li>
+        {goals.map((item: any, index: number) => (
+          <li key={item.key}>{`${index + indexToNumber}. ${item.goal}`}</li>
+        ))}
       </ol>
     </div>
   );
-}
+};
+
+export default GoalList;

@@ -11,3 +11,9 @@
   border-radius: 2rem;
   background-color: gray;
 }
+
+.button__container {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}

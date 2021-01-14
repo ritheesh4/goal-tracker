@@ -10,7 +10,10 @@ const goals = (state = initialState, action: any) => {
     case SET_GOAL:
       return {
         ...state,
-        goals: action.payload,
+        goals: [
+          ...state.goals,
+          { goal: action.payload, key: state.goals.length },
+        ],
       };
     case REMOVE_GOAL:
       return {
