@@ -1,0 +1,55 @@
+.status__submit__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.status__section {
+  display: flex;
+  flex-direction: row;
+}
+
+.timer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer__box {
+  height: 15rem;
+  width: 25rem;
+  border-radius: 1rem;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: gray;
+  padding-left: 0.5rem;
+}
+
+.btn {
+  background-color: gray;
+  color: black;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}

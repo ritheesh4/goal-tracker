@@ -1,0 +1,11 @@
+.resume__button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5rem;
+  background-color: rgb(170, 170, 31);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

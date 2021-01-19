@@ -1,0 +1,20 @@
+.goal__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.select__goal {
+  height: 2rem;
+  width: 20rem;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  padding-left: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.updown__btn__container {
+  display: flex;
+  flex-direction: column;
+}
