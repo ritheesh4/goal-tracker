@@ -5,7 +5,7 @@ import routes from '../constants/routes.json';
 import Actions from '../reducer/goalActions';
 import StatusTitle from './StatusTitle';
 import styles from './StatusSubmit.css';
-import { formatTime } from './utils';
+import formatTime from './utils';
 
 export default function StatusSubmit() {
   const dispatch = useDispatch();

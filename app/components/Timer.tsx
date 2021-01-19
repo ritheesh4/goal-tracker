@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import useTimer from './useTimer';
 import StartButton from './StartButton';
 import StopButton from './StopButton';
-import { formatTime } from './utils';
+import formatTime from './utils';
 import styles from './Timer.css';
 import Actions from '../reducer/goalActions';
 
