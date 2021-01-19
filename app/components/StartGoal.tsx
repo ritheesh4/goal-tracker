@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import routes from '../constants/routes.json';
 import SelectGoal from './SelectGoal';
 import Timer from './Timer';
-import StartButton from './StartButton';
-import StopButton from './StopButton';
 import FinishButton from './FinishButton';
-import UpDownButtons from './UpDownButtons';
+// import UpDownButtons from './UpDownButtons';
 import styles from './StartGoal.css';
 
 export default function StartGoal() {
+  const [goalsList, setGoalsList] = useState([]);
+
+  const getGoals = useSelector((state: any) => {
+    return state.goals.goals;
+  });
+
+  useEffect(() => {
+    setGoalsList(getGoals);
+  }, [getGoals]);
+
   return (
     <div className={styles.start__goal}>
       <div className={styles.current__goal}>
-        <SelectGoal />
-        <UpDownButtons />
+        <SelectGoal goal={goalsList} />
+        {/* <UpDownButtons /> */}
       </div>
       <Timer />
-      <StartButton />
-      <StopButton />
-      <FinishButton />
+      <Link to={routes.STATUS_UPDATE}>
+        <FinishButton />
+      </Link>
     </div>
   );
 }

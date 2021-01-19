@@ -1,5 +1,4 @@
 import React from 'react';
-// import styles from './GoalList.css';
 
 const GoalList = (props: any) => {
   const { goals } = props;

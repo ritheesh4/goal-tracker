@@ -7,7 +7,6 @@ import Clock from './Clock';
 import FinishButton from './FinishButton';
 import GoalList from './GoalList';
 import Actions from '../reducer/goalActions';
-// import { RootState } from '../store';
 
 export default function Home(): JSX.Element {
   const dispatch = useDispatch();
@@ -39,8 +38,9 @@ export default function Home(): JSX.Element {
           Submit
         </button>
       </div>
-      <FinishButton />
-      <Link to={routes.COUNTER}>to Counter</Link>
+      <Link to={routes.START_GOAL}>
+        <FinishButton />
+      </Link>
       <div className={styles.goal__list}>
         <GoalList goals={goalsList} />
       </div>
