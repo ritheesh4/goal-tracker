@@ -7,6 +7,7 @@ import StatusTitle from './StatusTitle';
 import styles from './StatusSubmit.css';
 import formatTime from './utils';
 import Clock from './Clock';
+import { appendToFile, getDate } from '../service/services';
 
 export default function StatusSubmit() {
   const dispatch = useDispatch();
@@ -25,7 +26,20 @@ export default function StatusSubmit() {
     };
   });
 
+  const date = getDate().toString();
+  const { goal } = currentGoal;
+  const { time } = currentGoal;
+  const currentTime = formatTime(time);
+
   const saveStatus = () => {
+    appendToFile('./output.csv', {
+      date,
+      goal,
+      currentTime,
+      status,
+      language,
+      loc,
+    });
     dispatch(Actions.saveStatus({ currentGoal, loc, language, status }));
   };
 

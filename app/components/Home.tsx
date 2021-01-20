@@ -7,6 +7,7 @@ import Clock from './Clock';
 import FinishButton from './FinishButton';
 import GoalList from './GoalList';
 import Actions from '../reducer/goalActions';
+import { createFile } from '../service/services';
 
 export default function Home(): JSX.Element {
   const dispatch = useDispatch();
@@ -17,9 +18,17 @@ export default function Home(): JSX.Element {
     return state.goals.goals;
   });
 
+  const saveToCsv = () => {
+    createFile('./output.csv');
+  };
+
   useEffect(() => {
     setGoalsList(getGoals);
   }, [dispatch, getGoals]);
+
+  useEffect(() => {
+    saveToCsv();
+  });
 
   const setGoal = () => {
     dispatch(Actions.setGoal(input));
