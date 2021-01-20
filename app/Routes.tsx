@@ -6,6 +6,7 @@ import App from './containers/App';
 import HomePage from './containers/HomePage';
 import StartGoalPage from './containers/StartGoalPage';
 import StatusSubmitPage from './containers/StatusSubmitPage';
+import FinalStatusPage from './containers/FinalStatusPage';
 // import StatusSubmitPage from './containers/StatusSubmitPage';
 
 // Lazily load routes and code split with webpack
@@ -27,6 +28,7 @@ export default function Routes() {
         <Route path={routes.START_GOAL} component={StartGoalPage} exact />
         <Route path={routes.COUNTER} component={CounterPage} exact />
         <Route path={routes.STATUS_UPDATE} component={StatusSubmitPage} exact />
+        <Route path={routes.FINAL_STATUS} component={FinalStatusPage} exact />
         {/* <Route path={routes.HOME} component={StatusSubmitPage} /> */}
       </Switch>
     </App>

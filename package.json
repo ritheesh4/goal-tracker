@@ -1,6 +1,6 @@
 {
   "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
+  "productName": "GoalTracker",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -51,7 +51,7 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
+    "productName": "GoalTracker",
     "appId": "org.develar.ElectronReact",
     "files": [
       "dist/",

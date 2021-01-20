@@ -2,5 +2,6 @@
   "HOME": "/",
   "COUNTER": "/counter",
   "START_GOAL": "/start",
-  "STATUS_UPDATE": "/update"
+  "STATUS_UPDATE": "/update",
+  "FINAL_STATUS": "/status"
 }

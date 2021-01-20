@@ -53,3 +53,10 @@ input {
   cursor: pointer;
   outline: none;
 }
+
+.clock__position {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+}

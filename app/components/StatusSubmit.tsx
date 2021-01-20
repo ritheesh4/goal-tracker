@@ -6,6 +6,7 @@ import Actions from '../reducer/goalActions';
 import StatusTitle from './StatusTitle';
 import styles from './StatusSubmit.css';
 import formatTime from './utils';
+import Clock from './Clock';
 
 export default function StatusSubmit() {
   const dispatch = useDispatch();
@@ -74,6 +75,9 @@ export default function StatusSubmit() {
             onChange={(e) => setStatus(e.target.value)}
           />
         </div>
+      </div>
+      <div className={styles.clock__position}>
+        <Clock />
       </div>
       <Link to={routes.START_GOAL}>
         <button className={styles.btn} type="submit" onClick={saveStatus}>
