@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import routes from '../constants/routes.json';
 import formatTime from './utils';
 import styles from './FinalStatus.css';
 
@@ -56,6 +58,11 @@ export default function FinalStatus() {
           {totalLoc.reduce((a: any, b: any) => Number(a) + Number(b), 0)}
         </div>
       </div>
+      <Link to={routes.START_GOAL}>
+        <button type="button" className={styles.back_btn}>
+          BACK
+        </button>
+      </Link>
     </div>
   );
 }

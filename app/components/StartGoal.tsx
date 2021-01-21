@@ -34,7 +34,14 @@ export default function StartGoal() {
         <FinishButton />
       </Link>
       <Link to={routes.FINAL_STATUS}>
-        <button type="button">EOD</button>
+        <button type="button" className={styles.eod__btn}>
+          EOD
+        </button>
+      </Link>
+      <Link to={routes.HOME}>
+        <button type="button" className={styles.back_btn}>
+          BACK
+        </button>
       </Link>
     </div>
   );

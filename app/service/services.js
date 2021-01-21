@@ -6,8 +6,11 @@ const fs = require('fs');
  * @returns {undefined}
  */
 function createFile(path) {
-  fs.writeFileSync(path, 'DATE, GOAL, TIME, STATUS, LANGUAGE, LOC');
-  console.log('completd');
+  fs.stat(path, (err, stats) => {
+    if (stats === undefined) {
+      fs.writeFileSync(path, 'DATE, GOAL, TIME, STATUS, LANGUAGE, LOC');
+    }
+  });
 }
 
 /**

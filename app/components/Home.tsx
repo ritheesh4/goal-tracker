@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
 
   useEffect(() => {
     saveToCsv();
-  });
+  }, []);
 
   const setGoal = () => {
     dispatch(Actions.setGoal(input));
