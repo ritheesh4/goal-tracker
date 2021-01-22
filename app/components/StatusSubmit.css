@@ -6,9 +6,26 @@
   height: 100vh;
 }
 
+.select__goal {
+  height: 2rem;
+  width: 20rem;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  padding-left: 0.3rem;
+  border-radius: 0.3rem;
+}
+
 .status__section {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.status__section div {
+  margin-bottom: 0.5rem;
+  margin-right: 0.2rem;
 }
 
 .timer__container {
@@ -39,6 +56,8 @@ input {
   border-radius: 2rem;
   background-color: gray;
   padding-left: 0.5rem;
+  outline: none;
+  margin-bottom: 0.5rem;
 }
 
 .btn {
@@ -52,4 +71,11 @@ input {
   justify-content: center;
   cursor: pointer;
   outline: none;
+}
+
+.clock__position {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
 }

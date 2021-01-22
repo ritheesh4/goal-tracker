@@ -6,6 +6,8 @@ import Actions from '../reducer/goalActions';
 import StatusTitle from './StatusTitle';
 import styles from './StatusSubmit.css';
 import formatTime from './utils';
+import Clock from './Clock';
+import { appendToFile, getDate } from '../service/services';
 
 export default function StatusSubmit() {
   const dispatch = useDispatch();
@@ -24,7 +26,20 @@ export default function StatusSubmit() {
     };
   });
 
+  const date = getDate().toString();
+  const { goal } = currentGoal;
+  const { time } = currentGoal;
+  const currentTime = formatTime(time);
+
   const saveStatus = () => {
+    appendToFile('./output.csv', {
+      date,
+      goal,
+      currentTime,
+      status,
+      language,
+      loc,
+    });
     dispatch(Actions.saveStatus({ currentGoal, loc, language, status }));
   };
 
@@ -74,6 +89,9 @@ export default function StatusSubmit() {
             onChange={(e) => setStatus(e.target.value)}
           />
         </div>
+      </div>
+      <div className={styles.clock__position}>
+        <Clock />
       </div>
       <Link to={routes.START_GOAL}>
         <button className={styles.btn} type="submit" onClick={saveStatus}>
